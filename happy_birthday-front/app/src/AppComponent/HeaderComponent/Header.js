@@ -76,12 +76,6 @@ class HeaderComponent extends Component {
           <h1>Citation et anniversaires</h1>
         </div>
         <div>
-          <label>IMPORT BIRTHDAY</label>
-          <input type="file" accept=".csv" onChange={this.handleFileUploadBirthday} />
-          <label>IMPORT QUOTES</label>
-          <input type="file" accept=".csv" onChange={this.handleFileUploadQuote} />
-        </div>
-        <div>
           <span>
             {currentDate}| 
             {currentTime.toLocaleString(DateTime.TIME_24_WITH_SECONDS)}

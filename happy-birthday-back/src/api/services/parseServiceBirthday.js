@@ -1,11 +1,13 @@
 const fs = require("fs");
 const { parse } = require("csv-parse");
+const path = require("path");
 
 exports.parseFile = (filename) => {
     let results = [];
 
     return new Promise((resolve, reject) => {
-        fs.createReadStream(`./data/${filename}`)
+        console.log(`Parsing file ${filename}`);
+        fs.createReadStream(filename)
             .pipe(parse({
                 delimiter: ";",
                 columns: true,

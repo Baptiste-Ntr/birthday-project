@@ -4,6 +4,7 @@ import HeaderComponent from './HeaderComponent/Header';
 import QuoteOnlyComponent from './QuoteOnlyComponent/QuoteOnly';
 import BirthdayComponent from './BirthdayComponent/Birthday';
 import SidebarComponent from './SidebarComponent/Sidebar';
+import FooterComponent from './FooterComponent/Footer';
 
 import { getTodaysBirthday } from '../services/birthdayApiService';
 
@@ -82,6 +83,7 @@ function App() {
       ) : (
         <QuoteOnlyComponent currentColor={CurrentColor} />
       )}{' '}
+      <FooterComponent />
     </div>
   );
 }

@@ -1,7 +1,6 @@
-const apiBaseUrl = 'http://localhost:3002'
 
 export const getTodaysBirthday = async () => {
-  let queryUrl = `${apiBaseUrl}/getBirthday`;
+  let queryUrl = `${'http://localhost:3002'}/getBirthday`;
 
   try {
     return await (await fetch(queryUrl)).json();
@@ -11,7 +10,7 @@ export const getTodaysBirthday = async () => {
 };
 
 export const getRandomQuote = async () => {
-  let queryUrl = `${apiBaseUrl}/getQuote`;
+  let queryUrl = `${'http://localhost:3002'}/getQuote`;
 
   try {
     return await (await fetch(queryUrl)).json();

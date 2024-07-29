@@ -26,14 +26,6 @@ exports.getTodaysBirthday = async (req, res) => {
     })
 }
 
-function convertDateFormat(dateStr) {
-    const date = new Date(dateStr);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Les mois commencent à 0
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-}
-
 exports.getTodaysBirthdayDB = async (req, res) => {
     const todaysDate = new Date().toISOString().slice(0, 10)
     try {
@@ -48,14 +40,7 @@ exports.getTodaysBirthdayDB = async (req, res) => {
 
             res.json({
                 count_total: results.length,
-                students_birthday: {
-                    id: results[0].id,
-                    first_name: results[0].first_name,
-                    last_name: results[0].last_name,
-                    //2024-07-29
-                    date_of_birth: convertDateFormat(results[0].date_of_birth),
-                    email: results[0].email
-                },
+                students_birthday: results
                 // students_birthday: results
                 // teachers_birthday: teachers
             });
