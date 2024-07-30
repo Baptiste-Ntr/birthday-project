@@ -76,6 +76,9 @@ class HeaderComponent extends Component {
           <h1>Citation et anniversaires</h1>
         </div>
         <div>
+          <a href="/login" className="text-slate-900 hover:text-slate-700">LOGIN</a>
+        </div>
+        <div>
           <span>
             {currentDate}| 
             {currentTime.toLocaleString(DateTime.TIME_24_WITH_SECONDS)}
